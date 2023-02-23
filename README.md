@@ -1,4 +1,4 @@
-<img alt="logo_adote" src="templates/static/usuarios/img/logo.png" width="30%">
+<img alt="logo_adote" src="templates/static/usuarios/img/logo.png" width="10%">
 
 <h1 align="center"> SITE MONEY MORE </h1>
 
@@ -44,7 +44,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 ## 💻 Projeto
 
 Projeto feito em Python durante da semana PYSTACK WEEK.
-<img alt="logo_adote" src="templates/static/usuarios/img/funcionalidade.gif" width="50%">
+<img alt="funcionalidade" src="templates/static/usuarios/img/funcionalidade.gif" width="50%">
 <br>
 
 ## 📸 Layouts
