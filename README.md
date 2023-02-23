@@ -1,4 +1,4 @@
-<img alt="logo_adote" src="templates/static/usuarios/img/logo.png" width="10%">
+<img alt="logo_adote" src="templates/static/usuarios/img/logo.png" width="20%">
 
 <h1 align="center"> SITE MONEY MORE </h1>
 
