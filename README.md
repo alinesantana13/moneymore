@@ -21,9 +21,7 @@ Projeto desenvolvido com Django junto com Yasmim e Heber
 <br>
 
 <p align="center">  
-Criação do zero de um site para cadastro e adoção de pets.
-Foram criados paginas de cadastro, login e paginas para visualização dos pets cadastros por usuarios, dashboard para apresentar a quantidade de pets adotados.
-
+Criação de website no estilo de um Blog, com a funcionalidade de dar dicas e ensinar métodos para que as pessoas consigam direcionar o seu dinheiro a partir do salário que ganham. E assim acabem economizando.
 </p>
 
 <br>
@@ -49,10 +47,10 @@ Projeto integrador feito para conclusão do curso de Programador Web, pelo SENAC
 
 ## 📸 Layouts
 Layout da tela de cadastro de usuário:
-<img alt="Cadastro_usuaruio" src="prints_projetos/cadastra_se.png" width="100%">
+<img alt="Cadastro_usuaruio" src="templates/static/usuarios/img/cadastro.jpeg" width="100%">
 
 Layout da tela de login:
-<img alt="Login" src="prints_projetos/login.png" width="100%">
+<img alt="Login" src="templates/static/usuarios/img/login.jpeg" width="100%">
 
 Layout da tela para cadastrar novo pet:
 <img alt="Cadastro_novo_pet" src="prints_projetos//novo_cadastro_pet.png" width="100%">
@@ -60,14 +58,9 @@ Layout da tela para cadastrar novo pet:
 Layout da tela para pesquisar por um pet, através da raça/cidade:
 <img alt="Pesquisa_pet_adotar" src="prints_projetos/quero_adotar_pesquisa.png" width="100%">
 
-Layout da tela das informações do Pet:
-<img alt="Informações_pet" src="prints_projetos/informações_pet.png" width="100%">
 
-Layout da tela após solicitar adoção:
-<img alt="Solicitar_adoção" src="prints_projetos/pedido_para_adoção.png" width="100%">
-
-Layout da tela de solicitação Aparovada/Recusada:
-<img alt="Aprovado_Recusado" src="prints_projetos/aprovado_recusado_sucesso.png" width="100%">
+Layout da tela do Banco de Dados
+<img alt="Aprovado_Recusado" src="templates/static/usuarios/img/bancodedados.jpeg" width="100%">
 
 Layout da tela de Dashboard:
 <img alt="Dashboard" src="prints_projetos/Dashboard.png" width="100%">
