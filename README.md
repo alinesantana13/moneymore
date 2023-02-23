@@ -43,7 +43,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 ## 💻 Projeto
 
-Projeto feito em Python durante da semana PYSTACK WEEK.
+Projeto integrador feito para conclusão do curso de Programador Web, pelo SENAC em parceria com o Porto Digital.
 <img alt="funcionalidade" src="templates/static/usuarios/img/funcionalidade.gif" width="100%">
 <br>
 
