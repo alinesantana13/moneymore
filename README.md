@@ -1,13 +1,13 @@
 <img alt="logo_adote" src="templates/static/usuarios/img/logo.png" width="30%">
 
-<h1 align="center"> SITE ADO.TE </h1>
+<h1 align="center"> SITE MONEY MORE </h1>
 
 <br>
 
 ---
 
 <p align="center">
-Projeto desenvolvido em Pyhton junto com o Caio na PYSTACK WEEK.
+Projeto desenvolvido com Django junto com Yasmim e Heber
 </p>
 
 <br>
