@@ -1,4 +1,4 @@
-<img alt="logo_adote" src="templates/static/usuarios/img/logo_adote.png" width="30%">
+<img alt="logo_adote" src="templates/static/usuarios/img/logo.png" width="30%">
 
 <h1 align="center"> SITE ADO.TE </h1>
 
