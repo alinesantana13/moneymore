@@ -52,7 +52,7 @@ Layout da tela de cadastro de usuário:
 <img alt="Cadastro_usuaruio" src="prints_projetos/cadastra_se.png" width="100%">
 
 Layout da tela de login:
-<img alt="Login" src="src="templates/static/usuarios/img/login.jpeg"" width="100%">
+<img alt="Login" src="templates/static/usuarios/img/login.jpeg" width="100%">
 
 Layout da tela para cadastrar novo pet:
 <img alt="Cadastro_novo_pet" src="prints_projetos//novo_cadastro_pet.png" width="100%">
