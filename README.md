@@ -44,7 +44,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 ## 💻 Projeto
 
 Projeto feito em Python durante da semana PYSTACK WEEK.
-
+<img alt="logo_adote" src="templates/static/usuarios/img/funcionalidade.gif" width="50%">
 <br>
 
 ## 📸 Layouts
