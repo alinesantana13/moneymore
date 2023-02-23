@@ -1,0 +1,345 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.108.0">
+    <title>MoneyMore</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/dashboard/">
+    <!--Link externo CSS-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <!--Link externo JavaScript-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <!-- links boostrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+        <!-- Principal CSS do Bootstrap -->
+        <link href="../../dist/css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Estilos customizados para esse template -->
+        <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900" rel="stylesheet">
+        <link href="blog.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="dashboard.css" rel="stylesheet">
+  </head>
+  <body>
+    
+<header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
+  <img src="{% static 'usuarios/img/logo.png' %}" class="card-img-right flex-auto d-none d-lg-block" data-src="holder.js/200x250?theme=thumb" alt="Card image cap" 
+  height="30px" width="30px">
+  <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3 fs-6" href="{% url 'pagina_inicial' %}">Money More</a>
+  <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  {% comment %} <input class="form-control form-control-dark w-25 rounded-0 border-0" type="text" placeholder="Search" aria-label="Search"> {% endcomment %}
+  <div class="navbar-nav">
+    <div class="nav-item text-nowrap">
+      <a class="nav-link px-3" href="{% url 'login' %}">Login</a>
+    </div>
+  </div>
+
+  
+  {% comment %} <!--Login suspenso-->
+    <div class="dropdown">
+      <button class="btn btn-primary">Login</button>
+      <div class="dropdown-content">
+        <br>
+        <form action="" method="post">
+            <div class="row">
+                <div class="col-md">
+                    <input type="email" class="form-control" placeholder="Email">
+                </div>
+                <div class="col-md">
+                    <input type="password" class="form-control" placeholder="Senha">
+                </div>
+            </div>
+            <br>
+            <button type="submit" class="btn btn-secondary position-absolute start-50 translate-middle">Entrar</button>
+            <br>
+        </form>
+        <a href="#" class="position-absolute start-50 translate-middle"> Cadastrar </a>
+        <br>
+      </div>
+    </div> {% endcomment %}
+
+    
+</header>
+<!--Barra de Navegação lateral-->
+{% comment %} <div class="container-fluid">
+  <div class="row">
+    <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
+      <div class="position-sticky pt-3 sidebar-sticky">
+        <ul class="nav flex-column">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">
+              <span data-feather="home" class="align-text-bottom"></span>
+              Dashboard
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <span data-feather="file" class="align-text-bottom"></span>
+              Orders
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <span data-feather="shopping-cart" class="align-text-bottom"></span>
+              Products
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <span data-feather="users" class="align-text-bottom"></span>
+              Customers
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <span data-feather="bar-chart-2" class="align-text-bottom"></span>
+              Reports
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <span data-feather="layers" class="align-text-bottom"></span>
+              Integrations
+            </a>
+          </li>
+        </ul> {% endcomment %}
+
+        {% comment %} <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted text-uppercase">
+          <span>Planilhas</span>
+          <a class="link-secondary" href="#" aria-label="Add a new report">
+            <span data-feather="plus-circle" class="align-text-bottom"></span>
+          </a>
+        </h6>
+        <ul class="nav flex-column mb-2">
+          <li class="nav-item">
+            <a class="nav-link" href="./planilha_mensal.html">
+              <span data-feather="file-text" class="align-text-bottom"></span>
+              Planilhas Mensais
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./planilha_anual.html">
+              <span data-feather="file-text" class="align-text-bottom"></span>
+              Planilhas Anuais
+            </a>
+          </li> {% endcomment %}
+          <!-- <li class="nav-item">
+            <a class="nav-link" href="#">
+              <span data-feather="file-text" class="align-text-bottom"></span>
+              Social engagement
+            </a>
+          </li> -->
+          <!-- <li class="nav-item">
+            <a class="nav-link" href="#">
+              <span data-feather="file-text" class="align-text-bottom"></span>
+              Year-end sale
+            </a>
+          </li> -->
+        </ul>
+      </div>
+    </nav>
+
+    <main>
+
+      <!--Início do texto-->
+      <div class="container">
+        <header class="blog-header py-3">
+          <div class="row flex-nowrap justify-content-between align-items-center">
+              <div class="col-4 text-center">
+                  <div class="col-4 text-center">                  
+                  </div>
+                </div>
+            <div class="col-4 d-flex justify-content-end align-items-center">
+              
+              <a class="btn btn-sm btn-outline-secondary" href="{% url 'cadastro' %}">Cadastrar-se</a>
+            </div> 
+          </div>
+        </header>
+        {% comment %} <div class="jumbotron">
+          <h1 class="display-4">Olá! Bem Vindo e Volte Sempre.</h1>
+          <p class="lead">Este é um simples WebSite para você se organizar!</p>
+          <hr class="my-4">
+          <p>Não esqueça de Cadastrar-se.</p>
+        </div> {% endcomment %}
+  
+        <div class="jumbotron p-3 p-md-5 text-white rounded bg-dark">
+          <div class="col-md-6 px-0">
+            <h1 class="display-4 font-italic">Programa de gestão de controle de finanças</h1>
+            <p class="lead my-3">As Finanças Pessoais são as relações com os recursos financeiros,
+              especialmente o dinheiro, demonstrando o seu uso com objetivos de desenvolver,
+              concentrar, investir e guardar as riquezas das pessoas. </p>
+          </div>
+        </div>
+  
+        <div class="row mb-2">
+          <div class="col-md-6">
+            <div class="card flex-md-row mb-4 shadow-sm h-md-250">
+              <div class="card-body d-flex flex-column align-items-start">
+                <strong class="d-inline-block mb-2 text-primary">MoneyMore</strong>
+                <h3 class="mb-0">
+                  <a class="text-dark" href="#">Quem somos?</a>
+                </h3>
+                <div class="mb-1 text-muted">16 de fev</div>
+                <p class="card-text mb-auto">Somos um site de gestão de controle para finanças, conosco as pessoas podem controlar seu dinheiro de forma inteligente.</p>
+                
+              </div>
+              <img src="{% static 'usuarios/img/logo.png' %}" class="card-img-right flex-auto d-none d-lg-block" data-src="holder.js/200x250?theme=thumb" alt="Card image cap" 
+              height="30%" width="30%">
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card flex-md-row mb-4 shadow-sm h-md-250">
+              <div class="card-body d-flex flex-column align-items-start">
+                <strong class="d-inline-block mb-2 text-success">Controle-se</strong>
+                <h3 class="mb-0">
+                  <a class="text-dark" href="#">Gráficos</a>
+                </h3>
+                <div class="mb-1 text-muted">16 de fev</div>
+                <p class="card-text mb-auto">Aqui você se organizarar com gráficos que irão lhe mostrar como usar suas finanças.</p>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <main role="main" class="container">
+        <div class="row">
+          <div class="col-md-8 blog-main">
+            <h3 class="pb-3 mb-4 font-italic border-bottom">
+              Controle De Finanças
+            </h3>
+  
+            <div class="blog-post">
+              <h2 class="blog-post-title">Organização</h2>
+              <p class="blog-post-meta">16 de Fevereiro de 2023.</p>
+  
+              <p>A organização financeira e o controle dos gastos pessoais requerem disciplina e estratégia. A melhor forma de alcançar tais objetivos é por meio da educação financeira.</p>
+              <hr>
+              <p>O importante é manter seus registros completos e organizados. Para isso, é essencial  classificar as despesas entre gastos fixos e variáveis, facilitando a sua visualização quando precisar consultar.</p>
+              <blockquote>
+              <p>Analise seu dinheiro e estabeleça o que não pode deixar de pagar de jeito nenhum, como contas de água, luz, aluguel, etc.</p>
+              </blockquote>
+  
+              <h2>Planilhas</h2>
+              <p>As planilha gera mais organização financeira pessoal. Com ela é possível detalhar todas as informações de cada mês ou de algum período à sua escolha. </p>
+  
+              <h3>Gráficos</h3>
+              <p>Fica mais fácil visualizar em quais setores você pode gastar menos e quanto é possível poupar todo mês. Dessa forma, é possível traçar objetivos de curto, médio e longo prazo </p>
+              <h3>Dicas</h3>
+              <p></p>Você sabia que o controle financeiro pessoal é apontado como a ferramenta de maior importância para lidar melhor com seu dinheiro? Pois é.</p>
+              <ul>
+                <li>Conheça suas finanças é o primeiro passo para alcançar o controle financeiro pessoal.</li>
+                <li> Ao invés de gastar com coisas desse tipo você poderia estar investindo seu dinheiro.</li>
+                <li>Comparar preços pode dar um pouco de trabalho, mas faz muita diferença nos gastos finais</li>
+              </ul>
+              <ol>
+                <li>Você não pode dar um pontapé inicial em seu futuro financeiro se estiver carregando uma tonelada de dívidas.</li>
+                <li>Os cartões de crédito podem se tornar o pior inimigo de quem gasta mal.</li>
+                <li>Um plano financeiro é essencial para assumir o controle de suas finanças e
+                  cumprir metas específicas. </li>
+              </ol>
+            </div><!-- /.blog-post -->
+  
+            <div class="blog-post">
+              <h2 class="blog-post-title">Invista!</h2>
+              <p class="blog-post-meta">16 de Fevereiro de 2023.</p>
+  
+              <p>Investir é a chave para alcançar bons resultados financeiros.</p>
+              <blockquote>
+                <p>Quando você começa a investir em aplicativos ou sites de finanças, você começa a perceber que sua vida fica com mas organização 
+                  e flexibilidade, com menos preocupações.</p> 
+              </blockquote>
+              <p>Lembre-se que investir é um processo de longo prazo, por isso você precisa se comprometer se realmente quiser ver seu dinheiro crescer.</p>
+              
+            </div><!-- /.blog-post -->
+  
+            <div class="blog-post">
+              <h2 class="blog-post-title">O controle financeiro pessoal é fundamental para a estabilidade financeira.</h2>
+              <p class="blog-post-meta">16 de Fevereiro de 2023.</p>
+  
+              <p></p>
+              <ul>
+                <li>Vale ressaltar que sua jornada para a independência financeira nem sempre será fácil. Seguir todas essas dicas pode dar um pouco de trabalho, mas a recompensa é certa.</li>
+                <li>Não basta poupar, economizar e diminuir seus gastos: lembre-se da importância de ir além e investir! Seu Controle é essencial.  </li>
+                <li>Ao planejar suas metas financeiras, lembre-se de considerar onde cada uma dessas prioridades se encaixa no cenário em que você se encontra.</li>
+              </ul>
+              
+              <p>Não deixe sua vida financeira para depois, comece hoje mesmo a organizar suas finanças basta Cadastrar-se acima.</p>
+            </div><!-- /.blog-post -->
+          </div><!-- /.blog-main -->
+  
+          <aside class="col-md-4 blog-sidebar">
+            <div class="p-3 mb-3 bg-light rounded">
+              <h4 class="font-italic">Sobre</h4>
+              <p class="mb-0">Gerenciador de planilhas e gráficos de controles de finanças, ao se Cadastrar-se você poderar sempre visitar nosso site e ver seus dados salvos.</p>
+            </div>
+            <div class="p-3">
+              <h4 class="font-italic">Onde nos encontrar:</h4>
+              <ol class="list-unstyled">
+                <li><a href="https://www.instagram.com/">Instagram</a></li>
+                <li><a href="https://www.whatsapp.com/">Whatsapp</a></li>
+                <li><a href="https://www.facebook.com/">Facebook</a></li>
+              </ol>
+            </div>
+          </aside><!-- /.blog-sidebar -->
+  
+        </div><!-- /.row -->
+  
+      </main><!-- /.container -->
+      <br>
+      <hr>
+      <br>
+      <footer class="blog-footer">
+          <div class="text-center">
+              <div class="text-center">                  
+              </div>
+              <p>Controle de Gestão de Finanças.</p>
+              <p>
+        <p>
+          <a href="#">Voltar ao topo</a>
+        </p> 
+       </div>
+      </footer>
+      <!-- Principal JavaScript do Bootstrap
+      ================================================== -->
+      <!-- Foi colocado no final para a página carregar mais rápido -->
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+      <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+      <script src="../../assets/js/vendor/popper.min.js"></script>
+      <script src="../../dist/js/bootstrap.min.js"></script>
+      <script src="../../assets/js/vendor/holder.min.js"></script>
+      <script>
+        Holder.addTheme('thumb', {
+          bg: '#55595c',
+          fg: '#eceeef',
+          text: 'Thumbnail'
+        });
+      </script>
+      <canvas class="my-4 w-100" id="myChart" width="900" height="380"></canvas>
+    </main>
+  </div>
+</div>
+<!--Fim da barra de navegação lateral-->
+
+
+<!--Gráfico-->
+    <!-- <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+
+      <script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js" integrity="sha384-uO3SXW5IuS1ZpFPKugNNWqTZRRglnUJK6UAZ/gxOX80nxEkN9NcGZTftn6RzhGWE" crossorigin="anonymous"></script><script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js" integrity="sha384-zNy6FEbO50N+Cg5wap8IKA4M/ZnLJgzc6w2NqACZaK0u0FXfOWRRJOnQtpZun8ha" crossorigin="anonymous"></script><script src="dashboard.js"></script>
+ --> 
+
+</body> 
+</html>

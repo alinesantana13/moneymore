@@ -1,0 +1,49 @@
+.bg-side{
+    background-color:#36363b ;
+    color: white;
+    height: 100vh;
+    
+
+}
+.header{
+    border-bottom: 1px solid rgb(79, 119, 206);
+    padding: 20px;
+}
+
+.body-form{
+    padding: 20px;
+}
+
+.font-logo{
+    margin-left: 10px;
+    font-size: 40px;
+    
+}
+
+.btn-custom-primary{
+    background-color:rgb(79, 119, 206);
+    border: none;
+    box-shadow: 2px 2px 5px 1px black;
+    color: white;
+    font-size: 20px;
+    padding: 5px 20px 5px 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+
+}
+
+.link-float{
+
+    text-decoration: none;
+    float: right;
+    margin: 20px;
+}
+
+.side-logo{
+    text-align: center;
+    margin-top: 60px;    
+}
+ 
+.main{
+    background-color:#271bae
+}

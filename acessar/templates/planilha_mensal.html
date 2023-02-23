@@ -1,0 +1,319 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.108.0">
+    <title>Planilha Mensal</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/dashboard/">
+    <!--Link externo CSS-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <!--Link externo JavaScript-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+
+
+<link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    
+    <!-- Custom styles for this template -->
+    <link href="dashboard.css" rel="stylesheet">
+
+    <style>
+      /*Estilo tabela*/
+      .tg  {border-collapse:collapse;border-color:#93a1a1;border-spacing:1px;}
+      .tg td{background-color:#f3f2f2;border-color:#93a1a1;border-style:solid;border-width:1px;color:#002b36;
+      font-size:14px;overflow:hidden;padding:10px 5px;word-break:normal;}
+      .tg th{background-color:#657b83;border-color:#93a1a1;border-style:solid;border-width:1px;color:#fdf6e3;
+      font-size:14px;font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+      .tg .tg-1wig{font-weight:bold;text-align:left;vertical-align:top}
+      .tg .tg-9ydz{border-color:#333333;font-weight:bold;text-align:center;vertical-align:top}
+      .tg .tg-sn4r{border-color:#93a1a1;font-weight:bold;text-align:left;vertical-align:top}
+      .tg .tg-0lax{text-align:left;vertical-align:top}
+      .tg .tg-ssmg{background-color:#f3f2f2;text-align:left;vertical-align:top}
+      .tg .tg-i46q{border-color:#93a1a1;text-align:left;vertical-align:top}
+      </style>
+  </head>
+  <body>
+
+    <header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
+      <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3 fs-6" href="{% url 'index' %}">Money More</a>
+      <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      {% comment %} <input class="form-control form-control-dark w-25 rounded-0 border-0" type="text" placeholder="Search" aria-label="Search"> {% endcomment %}
+      <div class="navbar-nav">
+        <div class="nav-item text-nowrap">
+          <a class="nav-link px-4" href="{% url 'sair' %}">Sair</a>
+        </div>
+      </div>
+
+    
+</header>
+<!--Barra de Navegação lateral-->
+<div class="container-fluid">
+  <div class="row">
+    <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
+      <div class="position-sticky pt-3 sidebar-sticky">
+        <ul class="nav flex-column">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">
+              <span data-feather="home" class="align-text-bottom"></span>
+              Dashboard
+            </a>
+          </li>
+          {% comment %} <li class="nav-item">
+            <a class="nav-link" href="#">
+              <span data-feather="file" class="align-text-bottom"></span>
+              Orders
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <span data-feather="shopping-cart" class="align-text-bottom"></span>
+              Products
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <span data-feather="users" class="align-text-bottom"></span>
+              Customers
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <span data-feather="bar-chart-2" class="align-text-bottom"></span>
+              Reports
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <span data-feather="layers" class="align-text-bottom"></span>
+              Integrations
+            </a>
+          </li> {% endcomment %}
+        </ul>
+
+        <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted text-uppercase">
+          <span>Planilhas</span>
+          <a class="link-secondary" href="#" aria-label="Add a new report">
+            <span data-feather="plus-circle" class="align-text-bottom"></span>
+          </a>
+        </h6>
+        <ul class="nav flex-column mb-2">
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'planilha_mensal' %}">
+              <span data-feather="file-text" class="align-text-bottom"></span>
+              Planilhas Mensais
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'planilha_anual' %}">
+              <span data-feather="file-text" class="align-text-bottom"></span>
+              Planilhas Anuais
+            </a>
+          </li>
+          <!-- <li class="nav-item">
+            <a class="nav-link" href="#">
+              <span data-feather="file-text" class="align-text-bottom"></span>
+              Social engagement
+            </a>
+          </li> -->
+          <!-- <li class="nav-item">
+            <a class="nav-link" href="#">
+              <span data-feather="file-text" class="align-text-bottom"></span>
+              Year-end sale
+            </a>
+          </li> -->
+        </ul>
+      </div>
+    </nav>
+
+    <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+      <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+        <h1 class="h2">Planilhas Mensais</h1>
+        <div class="btn-toolbar mb-2 mb-md-0">
+          {% comment %} <div class="btn-group me-2">
+            <button type="button" class="btn btn-sm btn-outline-secondary">Share</button>
+            <button type="button" class="btn btn-sm btn-outline-secondary">Export</button>
+          </div> 
+          <button type="button" class="btn btn-sm btn-outline-secondary dropdown-toggle">
+            <span data-feather="calendar" class="align-text-bottom"></span>
+            This week
+          </button> {% endcomment %}
+        </div>
+      </div>
+    <div class="edicao">
+      Com a realiadade dos brasileiros pensamos numa forma prática e fácil de gerar informações que direcionem os gastos a partir do salário que a pessoa receber.
+      <br>
+      Esse direcionamento foi baseado no método 70/30 de Nathalia Arcuri. A qual direciona que os gastos devem ser divididos da seguinte forma:
+      <br>
+     <strong>-</strong> 55% PARA O QUE É ESSENCIAL;
+     <br>
+     - 10% PARA APOSENTADORIA;
+     <br>
+     - 5% PARA EDUCAÇÃO;
+     <br>
+     - 20% PARA OBJETIVOS DE MÉDIO E LONGO PRAZO;
+     <br>
+     - 10% PRA GASTAR COM O QUE VC QUISER!
+    
+     <br>
+     <br>
+    <p><strong>Selcione abaixo o mês que deseja gerar a planilha mensal:</strong></p>
+  </div>
+       <select >
+          <option>Janeiro</option>
+          <option>Fevereiro</option>
+          <option>Março</option>
+          <option>Abril</option>
+          <option>Maio</option>
+          <option>Junho</option>
+          <option>Julho</option>
+          <option>Agosto</option>
+          <option>Setembro</option>
+          <option>Outubro</option>
+          <option>Novembro</option>
+          <option>Dezembro</option>
+       </select>
+     <input id="salario" name="textinput" value="" type="text" placeholder="Salário">
+     <input type="button" onclick="calcular()" value="Calcular">
+     <br>
+     <br>
+     <!--Função-->
+     <script type="text/javascript">
+       function calcular(){
+           var valor = document.getElementById("salario").value;
+           document.getElementById("janeiro-ge").innerHTML= "R$ " + (valor*0.55).toFixed(2)
+           document.getElementById("janeiro-a").innerHTML= "R$ " + (valor*0.1).toFixed(2)
+           document.getElementById("janeiro-e").innerHTML= "R$ " + (valor*0.05).toFixed(2)
+           document.getElementById("janeiro-o").innerHTML= "R$ " + (valor*0.2).toFixed(2)
+           document.getElementById("janeiro-g").innerHTML= "R$ " + (valor*0.1).toFixed(2)
+     
+           document.getElementById("salario-mes").innerHTML= "Salário: R$ " + valor
+       }
+      </script>
+     <!--Tabela-->
+     <table class="tg">
+       <thead>
+         <tr>
+           <th class="tg-9ydz" colspan="6">PLANILHA MENSAL</th>
+         </tr>
+       </thead>
+       <tbody>
+         <tr>
+           <td class="tg-sn4r" id="salario-mes">Salário:</td>
+           <td class="tg-0lax">Gastos essenciais 55%</td>
+           <td class="tg-0lax">Aposentadoria 10%</td>
+           <td class="tg-0lax">Educação 5%</td>
+           <td class="tg-0lax">Objetivos 20%</td>
+           <td class="tg-0lax">Gastar 10%</td>
+         </tr>
+         <tr>
+           <td class="tg-1wig">Limite no mês</td>
+           <td class="tg-ssmg" id="janeiro-ge"></td>
+           <td class="tg-i46q" id="janeiro-a"></td>
+           <td class="tg-i46q" id="janeiro-e"></td>
+           <td class="tg-i46q" id="janeiro-o"></td>
+           <td class="tg-0lax" id="janeiro-g"></td>
+         </tr>
+       </tbody>
+       </table>
+       <br>
+       <input type="button" onclick="tableToCSV()" value="Download CSV">
+        
+    
+      <canvas class="my-4 w-100" id="myChart" width="900" height="380"></canvas>
+      <div class="container">
+        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+          <p class="col-md-4 mb-0 text-muted">&copy; 2023 Compania, Money More</p>
+      
+          <a href="/" class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
+            <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"/></svg>
+          </a>
+      
+          {% comment %} <ul class="nav col-md-4 justify-content-end">
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Home</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Features</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Pricing</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">FAQs</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">About</a></li>
+          </ul> {% endcomment %}
+        </footer>
+      </div>
+    </main>
+  </div>
+</div>
+<!--Fim da barra de navegação lateral-->
+
+
+<!--Gráfico-->
+    <!-- <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+
+      <script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js" integrity="sha384-uO3SXW5IuS1ZpFPKugNNWqTZRRglnUJK6UAZ/gxOX80nxEkN9NcGZTftn6RzhGWE" crossorigin="anonymous"></script><script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js" integrity="sha384-zNy6FEbO50N+Cg5wap8IKA4M/ZnLJgzc6w2NqACZaK0u0FXfOWRRJOnQtpZun8ha" crossorigin="anonymous"></script><script src="dashboard.js"></script>
+ --> 
+ <script type="text/javascript">
+  function tableToCSV() {
+
+      // Variable to store the final csv data
+      var csv_data = [];
+
+      // Get each row data
+      var rows = document.getElementsByTagName('tr');
+      for (var i = 0; i < rows.length; i++) {
+
+          // Get each column data
+          var cols = rows[i].querySelectorAll('td,th');
+
+          // Stores each csv row data
+          var csvrow = [];
+          for (var j = 0; j < cols.length; j++) {
+
+              // Get the text data of each cell
+              // of a row and push it to csvrow
+              csvrow.push(cols[j].innerHTML);
+          }
+
+          // Combine each column value with comma
+          csv_data.push(csvrow.join(","));
+      }
+
+      // Combine each row data with new line character
+      csv_data = csv_data.join('\n');
+
+      // Call this function to download csv file 
+      downloadCSVFile(csv_data);
+
+  }
+
+  function downloadCSVFile(csv_data) {
+
+      // Create CSV file object and feed
+      // our csv_data into it
+      CSVFile = new Blob([csv_data], {
+          type: "text/csv"
+      });
+
+      // Create to temporary link to initiate
+      // download process
+      var temp_link = document.createElement('a');
+
+      // Download csv file
+      temp_link.download = "planilha.csv";
+      var url = window.URL.createObjectURL(CSVFile);
+      temp_link.href = url;
+
+      // This link should not be displayed
+      temp_link.style.display = "none";
+      document.body.appendChild(temp_link);
+
+      // Automatically click the link to
+      // trigger download
+      temp_link.click();
+      document.body.removeChild(temp_link);
+  }
+</script>
+</body> 
+</html>
