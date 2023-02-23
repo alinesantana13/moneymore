@@ -21,9 +21,7 @@ Projeto desenvolvido com Django junto com Yasmim e Heber
 <br>
 
 <p align="center">  
-Criação do zero de um site para cadastro e adoção de pets.
-Foram criados paginas de cadastro, login e paginas para visualização dos pets cadastros por usuarios, dashboard para apresentar a quantidade de pets adotados.
-
+Criação de website no estilo de um Blog, com a funcionalidade de dar dicas e ensinar métodos para que as pessoas consigam direcionar o seu dinheiro a partir do salário que ganham. E assim acabem economizando.
 </p>
 
 <br>
