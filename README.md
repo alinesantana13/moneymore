@@ -52,12 +52,6 @@ Layout da tela de cadastro de usuário:
 Layout da tela de login:
 <img alt="Login" src="templates/static/usuarios/img/login.jpeg" width="100%">
 
-Layout da tela para cadastrar novo pet:
-<img alt="Cadastro_novo_pet" src="prints_projetos//novo_cadastro_pet.png" width="100%">
-
-Layout da tela para pesquisar por um pet, através da raça/cidade:
-<img alt="Pesquisa_pet_adotar" src="prints_projetos/quero_adotar_pesquisa.png" width="100%">
-
 
 Layout da tela do Banco de Dados
 <img alt="Aprovado_Recusado" src="templates/static/usuarios/img/bancodedados.jpeg" width="100%">
