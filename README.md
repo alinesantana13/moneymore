@@ -56,8 +56,4 @@ Layout da tela de login:
 Layout da tela do Banco de Dados
 <img alt="Aprovado_Recusado" src="templates/static/usuarios/img/bancodedados.jpeg" width="100%">
 
-Layout da tela de Dashboard:
-<img alt="Dashboard" src="prints_projetos/Dashboard.png" width="100%">
-
-<br>
 
