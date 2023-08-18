@@ -84,8 +84,19 @@ Obs.: Só é possível ter acesso as funcionalidade do website se estiver logado
 ## 💻 Projeto
 
 Projeto integrador feito para conclusão do curso de Programador Web, pelo SENAC em parceria com o Porto Digital.
+
+## Funcionalidades
+
+- Planilha mensal: cálucula com base no seu salário o percentual que deve gastar em cada categoria no mês selecionado;
+- Planilha anual: cálucula com base no seu salário o percentual que deve gastar em cada mês do ano;
+- Baixar em no formato cvc a planilha mensal ou a anual.
+
+  ### Exibição de como funciona a planilha mensal
 <img alt="funcionalidade" src="templates/static/usuarios/img/funcionalidade.gif" width="100%">
 <br>
+
+
+
 
 ## 📸 Layouts
 
