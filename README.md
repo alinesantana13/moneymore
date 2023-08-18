@@ -57,6 +57,7 @@ Obs.: Verificar se o python instalado na sua máquina é o Python 3.10.2. Dando 
 **6º** Instalar os pacotes
 
 pip install Django==4.1.7
+<br>
 pip install django-material-admin==1.8.6
 
 **7º** Dar o comando para rodar o servidor  
